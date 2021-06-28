@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<link rel="stylesheet" type="text/css" href="common.css">
+		<title>새로운 비밀번호</title>
+	</head>
+	<script>
+		function pwCheck() {
+				var p1 = document.getElementById('pw').value;
+				var p2 = document.getElementById('pw1').value;
+				var btn = document.getElementById('submit-btn');
+				if(p1 != p2) {
+					document.getElementById('pwcheck').innerHTML='비밀번호가 일치하지 않습니다!'
+					document.getElementById('pwcheck').style.color='red';
+					btn.disabled = 'disabled';
+				} else {
+					document.getElementById('pwcheck').innerHTML='비밀번호가 일치합니다.'
+					document.getElementById('pwcheck').style.color='blue';
+					btn.disabled = false;
+				}
+			}
+	</script>
+
+	<body bgcolor="E7F5EF">
+		<!-- 상단 메뉴 영역 -->
+		<iframe id="topMenu" src="topMenu.jsp"></iframe>    
+
+		<!-- 상단 로고 영역 -->
+		<img id="logoimg" src="img/no24.png" width=220 height=90 align="left" href="index.html"></img>
+		<h1 id="logotext">새로운 비밀번호</h1><br/>
+		
+		<!-- 메인 상자 추가 -->
+		<form action = "newpsw.jsp" method ="POST">
+			<div id="mainbox" >
+				<h2><b>◈ 새로운 비밀번호</b></h2>
+				<br/><br/><br/>
+				<table border=0 cellspacing=0 cellpadding=2 >
+					<tr>
+						<td>
+							새 비밀번호: 
+						</td>
+					 	<td>
+							<input type="password" id="pw" name="newPW" onchange="pwCheck()" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							새 비밀번호 확인: 
+						</td>
+					 	<td>
+							<input type="password" id="pw1" name="newPW1" onchange="pwCheck()" value="">
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2 align="right">
+							<span id="pwcheck"></span>
+							<br/><br/><input type = "submit" id="submit-btn" disabled="disabled" value = "확인" style="width:50pt;height:30pt; font-size: 14pt;" >
+						</td>
+					</tr>
+				</table>
+			 </div>
+	   </form>
+	</body>
+</html>

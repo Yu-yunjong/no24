@@ -1,0 +1,243 @@
+/******************** 파일 버전 *************************
+파일 변경 시 1.0부터 계속 1.1, 1.2, ... 올라가는 식으로 작성해주세요.(파일 변경사항 있을 때, 덮어씌우기 위함.)
+!!!!!!!!!!!! 누락하지 않고 변경 부탁드립니다.!!!!!!!!!!!!!
+
+대풍: 
+윤종: 1.0 (2021-05-16 13:01)
+
+********************************************************/
+
+/* 대풍 */
+table{
+text-align:center;
+}
+
+body, ul, li{
+marrgin:0; padding:0; list-style:none;
+}
+.menu-1{
+text-align:right;
+}
+.menu-1> ul{
+
+display:inline-block;
+}
+.menu-1 > ul > li {
+display:inline-block;
+}
+#mainpagebox {
+	/* 위치 조절 */
+	position: absolute;
+	left: 560px;
+	top: 150px;
+	margin: 0 auto;
+	
+	/* 크기-너비 조절 */
+	height: 8%;
+	width: 1000px;
+
+	background: #666D82;
+}
+#Shtable{
+position: absolute;
+	left: 700px;
+	top: 50px;
+	margin: 0 auto;
+}
+
+/* 윤종 */
+* {
+	font-family: sans-serif;
+}
+
+a {
+	/* 링크 밑줄, 색상 제거 */
+	text-decoration-line:none;
+	text-decoration : none;
+	color: black;
+}
+
+#logoimg {
+	position: absolute;
+	left: 220px;
+}
+
+#logotext {
+	position: absolute;
+	left: 500px;
+}
+
+#mainbox {
+	/* 위치 조절 */
+	position: absolute;
+	left: 560px;
+	top: 220px;
+	margin: 0 auto;
+	
+	/* 크기-너비 조절 */
+	height: 70%;
+	width: 1000px;
+
+	background: #CEE1FF;
+}
+
+#mainbox1 {
+	/* 위치 조절 */
+	position: absolute;
+	/*left: 560px;*/
+	left: 360px;
+	top: 220px;
+	margin: 0 auto;
+	
+	/* 크기-너비 조절 */
+	height: 70%;
+	width: 1000px;
+}
+
+#mainbox2 {
+	/* 위치 조절 */
+	position: relative;
+	left: 200px;
+	top: 130px;
+	margin: 0 auto;
+}
+
+#mainbox2 > table {
+	background-color: #ffffff;
+}
+
+#mainbox3 {
+	/* 위치 조절 */
+	position: absolute;
+	left: 560px;
+	top: 220px;
+	margin: 0 auto;
+	
+	/* 크기-너비 조절 */
+	height: 70%;
+	width: 1000px;
+}
+
+#mainbox3 > table {
+	background-color: #ffffff;
+}
+
+#mainboxOrderList {
+	/* 위치 조절 */
+	position: relative;
+	left: 80px;
+	top: 130px;
+	margin: 0 auto;
+}
+
+#mainboxOrderList > table {
+	background-color: #ffffff;
+}
+
+#mainbox > h2 {
+	text-align: left;
+
+	/* 위치 조절 */
+	position: relative;
+	left: 30px;
+	top: 10px;
+}
+
+#mainbox > table {
+	/* 위치 조절 */
+	position: relative;
+	top: 30px;
+	margin: 0 auto;
+	
+	/* 글씨 크기, 정렬 */
+	text-align: center;
+	font-size: 15pt;
+}
+
+#sideMenuIframe {
+	/* 위치 조절 */
+	position: absolute;
+	left: 220px;
+	top: 220px;
+	margin: 0 auto;
+	
+	/* 크기-너비 조절 */
+	height: 70%;
+	width: 300px;
+
+	background: #FDF8D0;
+	border-width: 0px;
+}
+
+#sideMenu {
+/* 	위치 조절
+	position: absolute;
+	left: 220px;
+	top: 220px;
+	margin: 0 auto; */
+	
+	/* 크기-너비 조절 */
+	height: 70%;
+	width: 290px;
+}
+
+#sideMenu > table {
+	/* 위치 조절 */
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	
+	/* 크기-너비 조절 */
+	height: 10px;
+	width: 250px;
+
+	/* 내부 글자 정렬-크기 */
+	text-align: left;
+	font-size: 16pt;
+}
+
+#fileupload {
+	/* 크기-너비 조절 */
+	height: 70px;
+	
+	background: #CEE1FF;
+	border-width: 0px;
+}
+
+#selectTable {
+	background-color: #ffffff;
+}
+
+#topMenu {
+	/* 위치 조절 */
+	float: right;
+	
+	/* 크기-너비 조절 */
+	height: 80px;
+	width: 400px;
+
+	background: #E7F5EF;
+	border-width: 0px;
+}
+
+#leftTable {
+	/* 위치 조절 */
+	position: absolute;
+	left: 30px;
+	
+	background-color: #ffffff;
+	
+	/* 내부 글자 크기 */
+	font-size: 16pt;
+}
+
+#rightTable {
+	/* 위치 조절 */
+	position: absolute;
+	right: 30px;
+	
+	background-color: #ffffff;
+	
+	/* 내부 글자 크기 */
+	font-size: 16pt;
+}
