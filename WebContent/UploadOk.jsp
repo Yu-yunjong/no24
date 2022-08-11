@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<%
-		String saveDir = "D:\\_DBP 실습\\팀프로젝트\\no24\\WebContent\\img";	// 저장 경로 설정!!
+		String saveDir = "/www/server/tomcat_site/no24.remu.gq/webapps/no24/img";	// 저장 경로 설정!!
 		//ServletContext context = getServletContext();
 		//String saveDir = context.getRealPath("/img"); //경로
 		System.out.println("업로드 경로 >> " + saveDir);

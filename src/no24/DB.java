@@ -16,8 +16,8 @@ public class DB {
 	static  Statement stmt         = null;
 	static  ResultSet rs           = null ;
 
-	static String driver= "org.gjt.mm.mysql.Driver";
-//	static String URL = "jdbc:mysql://datastorage.gq:3306/no24";
+//	static String driver= "org.gjt.mm.mysql.Driver"; // 오류로 인해 아래꺼 사용
+	static String driver= "com.mysql.cj.jdbc.Driver";
 	static String URL = "jdbc:mysql://localhost:3306/no24";
 
 	public static void loadConnect()  {
@@ -40,8 +40,7 @@ public class DB {
 		try {
 
 			// 연결하기
-			con  = DriverManager.getConnection(URL, "root", "onlyroot");
-//			con  = DriverManager.getConnection(URL, "no24", "onlyroot");
+			con  = DriverManager.getConnection(URL, "no24", "onlyroot");
 
 			System.out.println("\n"+URL+"에 연결됨");
 
@@ -66,7 +65,7 @@ public class DB {
 	public static ResultSet selectQuery(String sql) { 
 		try {
 			// Statement 생성 
-			stmt = con.createStatement();
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY); // 2022-08-12 변경(구동 테스트 시 오류로 인한 수정 - 오류 내용: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.)
 
 
 			rs = stmt.executeQuery(sql);  
@@ -432,7 +431,7 @@ public class DB {
 			// SQL 질의문을 수행한다.
 			String sql = "SELECT bno, basket.pno, pname, bdate, bamount, bprice, btotal FROM basket, product WHERE uid = ? AND basket.pno = product.pno;" ;
 			System.out.println("\n  << for debug >> SQL : " + sql + "\n");
-			PreparedStatement prStmt = con.prepareStatement(sql);
+			PreparedStatement prStmt = con.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY); // 2022-08-12 변경(구동 테스트 시 오류로 인한 수정 - 오류 내용: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.)
 
 			prStmt.setString(1, ID);
 
